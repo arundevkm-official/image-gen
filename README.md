@@ -22,7 +22,12 @@ A powerful, local image generation app built for Mac Silicon (M1/M2/M3). It runs
 
 ### Screenshots
 
-![App Preview](screenshots/app_preview.png)
+![Screenshot 1](screenshots/screenshot_1.png)
+![Screenshot 2](screenshots/screenshot_2.png)
+![Screenshot 3](screenshots/screenshot_3.png)
+![Screenshot 4](screenshots/screenshot_4.png)
+![Screenshot 5](screenshots/screenshot_5.png)
+![Screenshot 6](screenshots/screenshot_6.png)
 
 ### 🛡️ Security & Performance
 
