@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+# Core ML
+torch
+diffusers
+transformers
+accelerate
+# Image processing
+Pillow

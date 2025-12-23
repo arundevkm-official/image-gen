@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Image Generator (MPS/GPU)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>✨ Dream Canvas</h1>
+
+    <div class="container">
+      <p>Running on Local GPU (MPS/Metal)</p>
+
+      <!-- Main Generation Section -->
+      <div class="input-section">
+        <textarea
+          id="prompt"
+          placeholder="A futuristic city with flying cars, cyberpunk style..."
+          rows="3"
+        ></textarea>
+
+        <details class="advanced-settings">
+          <summary>Advanced Settings</summary>
+          <div class="settings-grid">
+            <div>
+              <label for="negative-prompt">Negative Prompt</label>
+              <input
+                type="text"
+                id="negative-prompt"
+                placeholder="blurry, bad quality..."
+              />
+            </div>
+            <div>
+              <label>Guidance Scale: <span id="guidance-val">7.5</span></label>
+              <input
+                type="range"
+                id="guidance-scale"
+                min="1"
+                max="20"
+                value="7.5"
+                step="0.5"
+                oninput="document.getElementById('guidance-val').innerText = this.value"
+              />
+            </div>
+            <div>
+              <label>Inference Steps: <span id="steps-val">30</span></label>
+              <input
+                type="range"
+                id="inference-steps"
+                min="10"
+                max="50"
+                value="30"
+                step="1"
+                oninput="document.getElementById('steps-val').innerText = this.value"
+              />
+            </div>
+          </div>
+        </details>
+
+        <button id="generate-btn" onclick="generateImage()">Generate</button>
+      </div>
+
+      <!-- Result Area -->
+      <div id="result-area">
+        <div class="progress-container" id="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <span class="loading" id="loading-text"
+          >Generating... this might take a moment.</span
+        >
+
+        <!-- Gallery Grid -->
+        <div id="gallery" class="gallery-grid">
+          <!-- Images will be prepended here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div
+      id="lightbox"
+      class="lightbox"
+      onclick="if(event.target === this) closeLightbox()"
+    >
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+      <img id="lightbox-img" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
