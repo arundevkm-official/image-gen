@@ -61,6 +61,14 @@ A powerful, local image generation app built for Mac Silicon (M1/M2/M3). It runs
 2. **Access the App**
    Open your browser and navigate to: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
+## ☁️ Running on Google Colab
+
+You can run this project on Google Colab effortlessly!
+
+1. **Upload Files**: Download this repository and upload the files to your Google Colab file explorer.
+2. **Open Notebook**: Double-click `DreamCanvas_Colab.ipynb` in the file explorer.
+3. **Follow Instructions**: The notebook has step-by-step cells to install dependencies, authenticate ngrok, and launch the app with a public URL.
+
 ## 📡 API Usage
 
 **Endpoint**: `POST /generate`
